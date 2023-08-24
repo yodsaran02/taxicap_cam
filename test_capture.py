@@ -5,7 +5,7 @@ count = 100
 i = 0
 while i < 100:
     check, frame = cam.read()
-    count +=1 
+    i +=1 
 
 cv2.imwrite("test.jpg",frame)
 
