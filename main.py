@@ -15,7 +15,7 @@ while True:
     alpha = np.uint8(alpha * 255)
 
     # Stack new alpha layer with existing image to go from BGR to BGRA, i.e. 3 channels to 4 channels
-    result = np.dstack((na, alpha))
+    result = np.dstack((frame, alpha))
 
     # Save result   
     cv2.imshow('alpha', result)
