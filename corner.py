@@ -1,20 +1,19 @@
 import numpy as np
 import cv2 as cv
 
-while True:
-    cam = cv.VideoCapture(0)
-    check, img = cam.read()
-    gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
+img = cv.imread('chessboard_img.png')
 
-    gray = np.float32(gray)
-    dst = cv.cornerHarris(gray, 2, 3, 0.04)
+cv.imshow('img', img)
+gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
 
-    dst = cv.dilate(dst, None)
+gray = np.float32(gray)
+dst = cv.cornerHarris(gray, 2, 3, 0.04)
 
-    img[dst > 0.01 * dst.max()] = [0, 0, 255]
+dst = cv.dilate(dst, None)
 
-    cv.imshow('dst', img)
-    cam.release()
+img[dst > 0.01 * dst.max()] = [0, 0, 255]
+
+cv.imshow('dst', img)
 
 if cv.waitKey(0) & 0xff == 27:
     cv.destroyAllWindows()
