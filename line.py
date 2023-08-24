@@ -4,7 +4,7 @@ import math
 
 
 
-image1 = cv2.imread('dave2.jpg')
+image1 = cv2.imread('test.jpg')
 gray=cv2.cvtColor(image1,cv2.COLOR_BGR2GRAY)
 canimg = cv2.Canny(gray, 50, 200)
 
