@@ -9,9 +9,6 @@ import numpy as np
 import test_capture
 import corner 
 import line
-key = cv2.waitKey(1)
-if key == 27:
-    break
 
 cam.release()
 cv2.destroyAllWindows()
