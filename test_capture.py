@@ -10,4 +10,4 @@ while i < 100:
 cv2.imwrite("test.jpg",frame)
 
 cam.release()
-cam.destroyAllWindows()
+#cam.destroyAllWindows()
