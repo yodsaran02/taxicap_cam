@@ -3,10 +3,10 @@ import numpy as np
 import tensorflow as tf
 
 # Load the pre-trained object detection model (TensorFlow Object Detection API)
-model = tf.saved_model.load('path_to_your_model')
+model = tf.saved_model.load('lite-model_east-text-detector_fp16_1.tflite')
 
 # Load and preprocess the image
-image = cv2.imread('image_path')
+image = cv2.imread('test.jpg')
 image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)  # Convert to RGB
 input_tensor = tf.convert_to_tensor(image)
 
