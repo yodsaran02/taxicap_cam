@@ -19,5 +19,5 @@ options = ""
 if args["digits"] > 0:
 	options = "outputbase digits"
 # OCR the input image using Tesseract
-text = pytesseract.image_to_string(rgb, config='digits')
+text = pytesseract.image_to_string(rgb, config=options)
 print(text)
