@@ -67,8 +67,10 @@ graph3 = {
     25: {0: 48, 26: 33},
     
 }
-start_node = 19
-end_node = 29
-shortest_distance, shortest_path = dijkstra(graph2, start_node, end_node)
-print("Shortest distance from node", start_node, "to node", end_node, ":", shortest_distance)
-print("Shortest path:", shortest_path)
+for i in range(2):
+    for j in range (44):
+        start_node = i
+        end_node = j
+        shortest_distance, shortest_path = dijkstra(graph2, start_node, end_node)
+        print("Shortest distance from node", start_node, "to node", end_node, ":", shortest_distance)
+        print("Shortest path:", shortest_path)
