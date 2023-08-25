@@ -8,6 +8,6 @@ while True:
     if check:
         cv2.imshow("feed",img)
         time.sleep(0.2)
-        cv2.imwrite("trained/"+str(i)+".jpg")
+        cv2.imwrite("trained/"+str(i)+".jpg",img)
     time.sleep(1)
     
