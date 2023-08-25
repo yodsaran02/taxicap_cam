@@ -1,4 +1,4 @@
 import pytesseract
 import cv2
 img = cv2.imread("./test.jpg")
-pytesseract.image_to_string(img, config='outputbase digits')
+print(pytesseract.image_to_string(img, config='outputbase digits'))
