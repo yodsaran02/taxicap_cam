@@ -3,6 +3,7 @@ import cv2 as cv
 
 cam = cv.VideoCapture(0)
 while True:
+    check, img = cam.read()
     gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
 
     gray = np.float32(gray)
